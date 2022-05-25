@@ -1,0 +1,14 @@
+  <div id="header-global">
+      <!-- shop title -->
+      <a href="/">
+          {{ 'general.shop.title' | t }}
+      </a>
+
+      <!-- menu -->
+
+      {% include 'nav-list' , handle: 'main-menu' %}
+
+      <a href="/cart">cart
+          {{ 'cart.button.count_html' | t: itemCount: cart.item_count }}
+      </a>
+  </div>
