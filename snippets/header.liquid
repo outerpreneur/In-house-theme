@@ -1,17 +1,18 @@
+<div id="header-global">
+    <!-- shop title -->
+    <a href="/">
+        {{ 'general.shop.title' | t }}
+    </a>
 
-  <div id="header-global">
-      <!-- shop title -->
-      <a href="/">
-          {{ 'general.shop.title' | t }}
-      </a>
+    <!-- menu -->
 
-      <!-- menu -->
+    {% include 'nav-list' , handle: 'main-menu' %}
 
-      {% include 'nav-list' , handle: 'main-menu' %}
+    <a href="/search">Search</a>
 
-      {% include 'currency-picker' %}
+    {% include 'currency-picker' %}
 
-      <a href="/cart">cart
-          {{ 'cart.button.count_html' | t: itemCount: cart.item_count }}
-      </a>
-  </div>
+    <a href="/cart">cart
+        {{ 'cart.button.count_html' | t: itemCount: cart.item_count }}
+    </a>
+</div>
