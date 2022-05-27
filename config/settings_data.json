@@ -1,5 +1,11 @@
 {
-  "current": "Default",
+  "current": {
+    "show_multiple_currencies": false,
+    "currency_format": "money_format",
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
     "Default": {
     }
