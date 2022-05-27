@@ -1,6 +1,6 @@
 {
   "current": {
-    "show_multiple_currencies": false,
+    "show_multiple_currencies": true,
     "currency_format": "money_format",
     "content_for_index": [
 
