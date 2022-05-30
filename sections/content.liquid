@@ -1,0 +1,149 @@
+{% schema %}
+
+{
+    "name":"Page Content",
+    "class":"page-content-section",
+    "blocks": [
+        {
+        "type": "collection",
+        "name": "collections",
+        "settings":
+            [
+                {
+                    "id": "collection",
+                    "type": "collection",
+                    "label": "collection"
+                },
+                {
+                    "id": "max_products",
+                    "type": "range",
+                    "min": 2,
+                    "max": 6,
+                    "step": 1,
+                    "unit":  "ct",
+                    "label": "products to show",
+                    "default": 2
+                },
+                {
+                    "id":"title",
+                    "type":"text",
+                    "label":"title",
+                    "info": "defaults to Collection title"
+                },
+                {
+                    "id":"content",
+                    "type":"textarea",
+                    "label":"Xontent"
+                },
+                {
+                    "id":"show_button",
+                    "type":"checkbox",
+                    "label":"show button",
+                    "default":true
+                },
+                {
+                    "id":"button_text",
+                    "type":"text",
+                    "label":"button text",
+                    "placeholder":"Shop now",
+                    "info":"Defaults to \"shop now\""
+                }
+            ]
+        },
+        {
+        "type": "image_text",
+        "name": "image &amp: Text",
+        "settings":
+            [
+                {
+                    "id":"image",
+                    "type":"image_picker",
+                    "label":"image"
+                },
+                                {
+                    "id":"title",
+                    "type":"text",
+                    "label":"title",
+                    "info": "defaults to Collection title"
+                },
+                {
+                    "id":"content",
+                    "type":"textarea",
+                    "label":"content"
+                },
+                {
+                    "id":"show_button",
+                    "type":"checkbox",
+                    "label":"show button",
+                    "default":true
+                },
+                {
+                    "id":"button_url",
+                    "type":"url",
+                    "label":"Button URL"
+                },
+                {
+                    "id":"button_text",
+                    "type":"text",
+                    "label":"button text",
+                    "placeholder":"Shop now",
+                    "info":"Defaults to \"shop now\""
+                },
+                {
+                    "id": "direction",
+                    "type": "select",
+                    "label": "direction",
+                    "options":
+                    [
+                        {
+                            "value": "rtl",
+                            "label": "image &rarr; Text"
+                        },
+                        {
+                            "value": "rtr",
+                            "label": "text &rarr; Image"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+        "type": "quote",
+        "name": "quote",
+        "settings": 
+            [
+                {
+                    "id":"content",
+                    "type":"textarea",
+                    "label":"Content"
+                },
+                {
+                    "id":"source",
+                    "type":"textarea",
+                    "label":"source"
+                },
+                                {
+                    "id":"show_button",
+                    "type":"checkbox",
+                    "label":"show button",
+                    "default":true
+                },
+                {
+                    "id":"button_url",
+                    "type":"url",
+                    "label":"Button URL"
+                },
+                {
+                    "id":"button_text",
+                    "type":"text",
+                    "label":"button text",
+                    "placeholder":"Read more",
+                    "info":"Defaults to \"Read more\""
+                }
+            ]
+        }
+    ],
+    "default": {}
+}
+
+{% endschema %}
