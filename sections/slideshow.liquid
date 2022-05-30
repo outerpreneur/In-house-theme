@@ -2,7 +2,12 @@
     {{ section.settings.autoplay_speed }}
     {% for block in section.blocks %}
     <div class="slide" {{ block_shopify_attributes }}>
-        {{ block.settings.image }}
+
+        {% if block.settings.image != blank %}
+        {{ block.settings.image.alt }}
+        {% else %}
+        image is blank
+        {% endif %}
 
         {{block.settings.title }}
 
