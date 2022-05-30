@@ -1,5 +1,24 @@
 {% schema %}
 {
-"name": "Slideshow"
+"name": "Slideshow",
+"class": "hero-slideshow",
+"settings": [{
+"id": "autoplay",
+"type": "checkbox",
+"label": "Autoplay Slideshow",
+"default": true
+},
+{
+"id": "autoplay_speed",
+"type": "range",
+"min": 2000,
+"max": 8000,
+"step": 500,
+"unit": "ms",
+"label": "autoplay speed",
+"default": 5000
 }
+]
+}
+
 {% endschema %}
