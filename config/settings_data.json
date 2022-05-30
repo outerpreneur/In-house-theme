@@ -12,8 +12,8 @@
               "image": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
               "title": "Hello",
               "content": "yepsssiii",
-              "button_url": "",
-              "button_text": ""
+              "button_url": "shopify:\/\/pages\/about",
+              "button_text": "Button"
             }
           },
           "slideshow-1": {
