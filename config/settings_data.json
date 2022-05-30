@@ -2,6 +2,40 @@
   "current": {
     "show_multiple_currencies": true,
     "currency_format": "money_format",
+    "sections": {
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slideshow-0": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
+              "title": "Hello",
+              "content": "yepsssiii",
+              "button_url": "",
+              "button_text": ""
+            }
+          },
+          "slideshow-1": {
+            "type": "slide",
+            "settings": {
+              "title": "",
+              "content": "",
+              "button_url": "",
+              "button_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "slideshow-0",
+          "slideshow-1"
+        ],
+        "settings": {
+          "autoplay": true,
+          "autoplay_speed": 5000
+        }
+      }
+    },
     "content_for_index": [
 
     ]
