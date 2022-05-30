@@ -19,7 +19,7 @@
 {% schema %}
 
 {
-    "name":"Slideshow",
+    "name":"slideshow",
     "class":"hero-slideshow",
     "settings":[
         {
@@ -75,35 +75,19 @@
             ]
         }
     ],
-    "presets":[
-        {
-            "category":"hero",
-            "name":"Slideshow",
-            "settings":{
-                "autoplay":true,
-                "autoplay_speed":6500
-            },
-            "blocks":[
-                {
-                    "type":"slide",
-                    "settings":{
-                        "title":"slide1",
-                        "content":"Some Slide 1 content",
-                        "button_url":"#",
-                        "button_text":"Slide button"
-                    }
-                },
-                    {
-                        "type":"slide",
-                        "settings":{
-                            "title":"slide 2",
-                            "content":"Lorem ipsum",
-                            "button_url":"#"
-                        }
-                    }
-                ]
-            }
-        ]
+    "default": {
+    "settings": {
+      "autoplay": true
+    },
+    "blocks": [
+      {
+        "type": "slide"
+      },
+      {
+        "type": "slide"
+      }
+    ]
+  }
     }
 
 {% endschema %}
