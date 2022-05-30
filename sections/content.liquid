@@ -1,150 +1,161 @@
-{% schema %}
 
-{
-    "name":"Page Content",
-    "class":"page-content-section",
+{% schema %}
+  {
+    "name": "Page Content",
+    "class": "page-content-section",
     "blocks": [
-        {
+      {
         "type": "collection",
-        "name": "collections",
-        "settings":
-            [
-                {
-                    "id": "collection",
-                    "type": "collection",
-                    "label": "collection"
-                },
-                {
-                    "id": "max_products",
-                    "type": "range",
-                    "min": 2,
-                    "max": 6,
-                    "step": 1,
-                    "unit":  "ct",
-                    "label": "products to show",
-                    "default": 2
-                },
-                {
-                    "id":"title",
-                    "type":"text",
-                    "label":"title",
-                    "info": "defaults to Collection title"
-                },
-                {
-                    "id":"content",
-                    "type":"textarea",
-                    "label":"Xontent"
-                },
-                {
-                    "id":"show_button",
-                    "type":"checkbox",
-                    "label":"show button",
-                    "default":true
-                },
-                {
-                    "id":"button_text",
-                    "type":"text",
-                    "label":"button text",
-                    "placeholder":"Shop now",
-                    "info":"Defaults to \"shop now\""
-                }
-            ]
-        },
-        {
+        "name": "Collection",
+        "settings": [
+          {
+            "id": "collection",
+            "type": "collection",
+            "label": "Collection"
+          },
+          {
+            "id": "max_products",
+            "type": "range",
+            "min": 2,
+            "max": 6,
+            "step": 1,
+            "unit": "ct",
+            "label": "Products to Show",
+            "default": 2
+          },
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title",
+            "info": "Defaults to Collection Title"
+          },
+          {
+            "id": "content",
+            "type": "textarea",
+            "label": "Content"
+          },
+          {
+            "id": "show_button",
+            "type": "checkbox",
+            "label": "Show Button?",
+            "default": true
+          },
+          {
+            "id": "button_text",
+            "type": "text",
+            "label": "Button Text",
+            "placeholder": "Shop Now",
+            "info": "Defaults to \"Shop Now\""
+          }
+        ]
+      },
+      {
         "type": "image_text",
-        "name": "image &amp: Text",
-        "settings":
-            [
-                {
-                    "id":"image",
-                    "type":"image_picker",
-                    "label":"image"
-                },
-                                {
-                    "id":"title",
-                    "type":"text",
-                    "label":"title",
-                    "info": "defaults to Collection title"
-                },
-                {
-                    "id":"content",
-                    "type":"textarea",
-                    "label":"content"
-                },
-                {
-                    "id":"show_button",
-                    "type":"checkbox",
-                    "label":"show button",
-                    "default":true
-                },
-                {
-                    "id":"button_url",
-                    "type":"url",
-                    "label":"Button URL"
-                },
-                {
-                    "id":"button_text",
-                    "type":"text",
-                    "label":"button text",
-                    "placeholder":"Shop now",
-                    "info":"Defaults to \"shop now\""
-                },
-                {
-                    "id": "direction",
-                    "type": "select",
-                    "label": "direction",
-                    "options":
-                    [
-                        {
-                            "value": "rtl",
-                            "label": "image &rarr; Text"
-                        },
-                        {
-                            "value": "rtr",
-                            "label": "text &rarr; Image"
-                        }
-                    ]
-                }
+        "name": "Image & Text",
+        "settings": [
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+          },
+          {
+            "id": "title",
+            "type": "text",
+            "label": "Title",
+            "info": "Defaults to Collection Title"
+          },
+          {
+            "id": "content",
+            "type": "textarea",
+            "label": "Content"
+          },
+          {
+            "id": "show_button",
+            "type": "checkbox",
+            "label": "Show Button?",
+            "default": true
+          },
+          {
+            "id": "button_url",
+            "type": "url",
+            "label": "Button URL"
+          },
+          {
+            "id": "button_text",
+            "type": "text",
+            "label": "Button Text",
+            "placeholder": "Shop Now",
+            "info": "Defaults to \"Shop Now\""
+          },
+          {
+            "id": "direction",
+            "type": "select",
+            "label": "Direction",
+            "options": [
+              {
+                "value": "rtl",
+                "label": "Image -> Text"
+              },
+              {
+                "value": "ltr",
+                "label": "Text -> Image"
+              }
             ]
-        },
-        {
+          },
+          {
+            "id": "bgcolor",
+            "type": "select",
+            "label": "Background Color",
+            "options": [
+              {
+                "value": "white",
+                "label": "White"
+              },
+              {
+                "value": "black",
+                "label": "Black"
+              }
+            ],
+            "default": "white"
+          }
+        ]
+      },
+      {
         "type": "quote",
-        "name": "quote",
-        "settings": 
-            [
-                {
-                    "id":"content",
-                    "type":"textarea",
-                    "label":"Content"
-                },
-                {
-                    "id":"source",
-                    "type":"textarea",
-                    "label":"source"
-                },
-                                {
-                    "id":"show_button",
-                    "type":"checkbox",
-                    "label":"show button",
-                    "default":true
-                },
-                {
-                    "id":"button_url",
-                    "type":"url",
-                    "label":"Button URL"
-                },
-                {
-                    "id":"button_text",
-                    "type":"text",
-                    "label":"button text",
-                    "placeholder":"Read more",
-                    "info":"Defaults to \"Read more\""
-                }
-            ]
-        }
+        "name": "Quote",
+        "settings": [
+          {
+            "id": "content",
+            "type": "textarea",
+            "label": "Content"
+          },
+          {
+            "id": "source",
+            "type": "textarea",
+            "label": "Source"
+          },
+          {
+            "id": "show_button",
+            "type": "checkbox",
+            "label": "Show Button?",
+            "default": true
+          },
+          {
+            "id": "button_url",
+            "type": "url",
+            "label": "Button URL"
+          },
+          {
+            "id": "button_text",
+            "type": "text",
+            "label": "Button Text",
+            "placeholder": "Read More",
+            "info": "Defaults to \"Read More\""
+          }
+        ]
+      }
     ],
-    "presets":
-    [
+    "presets": [
       {
         "category": "Content",
         "name": "Index Content",
