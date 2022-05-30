@@ -22,8 +22,8 @@
               "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
               "title": "another test",
               "content": "ewfewrew",
-              "button_url": "",
-              "button_text": ""
+              "button_url": "shopify:\/\/pages\/contact",
+              "button_text": "button 2"
             }
           }
         },
