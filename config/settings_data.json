@@ -5,6 +5,32 @@
     "sections": {
       "slideshow": {
         "type": "slideshow",
+        "blocks": {
+          "0e0f5cf7-bd21-4e58-b40d-b0d66f1e887b": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/collection-hero.jpg",
+              "title": "",
+              "content": "",
+              "button_url": "",
+              "button_text": ""
+            }
+          },
+          "cb199981-3fd2-4bbc-bd1a-679a811fc779": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hero-stitch.jpg",
+              "title": "",
+              "content": "",
+              "button_url": "",
+              "button_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "0e0f5cf7-bd21-4e58-b40d-b0d66f1e887b",
+          "cb199981-3fd2-4bbc-bd1a-679a811fc779"
+        ],
         "settings": {
           "autoplay": true,
           "autoplay_speed": 5000
