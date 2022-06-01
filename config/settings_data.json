@@ -10,20 +10,20 @@
             "type": "slide",
             "settings": {
               "image": "shopify:\/\/shop_images\/collection-hero.jpg",
-              "title": "",
-              "content": "",
-              "button_url": "",
-              "button_text": ""
+              "title": "Slide 1",
+              "content": "Content 1",
+              "button_url": "shopify:\/\/pages\/about",
+              "button_text": "Page 1"
             }
           },
           "cb199981-3fd2-4bbc-bd1a-679a811fc779": {
             "type": "slide",
             "settings": {
               "image": "shopify:\/\/shop_images\/hero-stitch.jpg",
-              "title": "",
-              "content": "",
-              "button_url": "",
-              "button_text": ""
+              "title": "Slide 2",
+              "content": "Content 2",
+              "button_url": "shopify:\/\/pages\/about",
+              "button_text": "button 2"
             }
           }
         },
@@ -44,15 +44,16 @@
             "settings": {
               "collection": "collection-0",
               "max_products": 2,
-              "title": "",
-              "content": "",
+              "title": "Chairs",
+              "content": "content Content",
               "show_button": true,
-              "button_text": ""
+              "button_text": "button"
             }
           },
           "c7e82da4-8a07-4c4a-ade6-d6df8212b2de": {
             "type": "image_text",
             "settings": {
+              "image": "shopify:\/\/shop_images\/show-2.jpg",
               "title": "Hey hello",
               "content": "Lorem ipsus",
               "show_button": true,
