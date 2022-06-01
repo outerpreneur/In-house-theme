@@ -3,6 +3,8 @@
     {% for block in section.blocks %}
         <div class="content-block-{{ block.type }}" {{ block_shopify_attributes }}>
             {% case block.type %}
+
+
                 {% when 'collection' %}
                     <!-- begin colleciton block -->
                     {% assign collection = collections[block.settings.collection] %}
@@ -37,6 +39,8 @@
                         {% include 'product-card' %}
                     {% endfor %}
                     <!-- end collection block -->
+
+
                 {% when 'image-text' %}
                     <!-- image/text block  -->
                     <div class="image-text direction-{{ block.settings.direction }}">
@@ -48,7 +52,6 @@
                         {% endif %}
 
                         <div class="block-content">
-
                             <h3>{{block.settings.title }}</h3>
                             {% if block.settings.content != blank %}
                                 <p>{{block.settings.content }}</p>
@@ -63,10 +66,11 @@
                                     {% endif %}
                                 </a>
                             {% endif %}
-
                         </div>
                     </div>
                     <!-- end image/text block  -->
+
+
                 {% when 'quote' %}
                     <!-- quote block -->
                     <blockquote>
