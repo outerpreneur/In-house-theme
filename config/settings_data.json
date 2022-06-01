@@ -53,11 +53,11 @@
           "c7e82da4-8a07-4c4a-ade6-d6df8212b2de": {
             "type": "image_text",
             "settings": {
-              "title": "",
-              "content": "",
+              "title": "Hey hello",
+              "content": "Lorem ipsus",
               "show_button": true,
-              "button_url": "",
-              "button_text": "",
+              "button_url": "shopify:\/\/collections\/collection-0",
+              "button_text": "Hello",
               "direction": "rtl",
               "bgcolor": "white"
             }
@@ -65,11 +65,11 @@
           "8b959f9a-f18a-4a46-a341-9138aa200d26": {
             "type": "quote",
             "settings": {
-              "content": "",
-              "source": "",
+              "content": "hey hello 2 quote",
+              "source": "John Appleseed",
               "show_button": true,
-              "button_url": "",
-              "button_text": ""
+              "button_url": "shopify:\/\/policies\/refund-policy",
+              "button_text": "Read"
             }
           }
         },
