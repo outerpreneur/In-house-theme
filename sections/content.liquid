@@ -1,22 +1,16 @@
-<div
-    class="content-wrap">
+<div class="content-wrap">
 
     {% for block in section.blocks %}
-        <div
-            class="content-block-{{ block.type }}"
-            {{ block_shopify_attributes }}>
+        <div class="content-block-{{ block.type }}" {{ block_shopify_attributes }}>
             {% case block.type %}
-                {% when collection %}
-                    {{ block.settings.collection }}
+                {% when 'collection' %}
+                    {% assign collection = collections[block.settings.collection] %}
+                    {{ collection.title }}
+                    {{ collection.description }}
                 {% else %}
-
             {% endcase %}
-
-
         </div>
     {% endfor %}
-
-
 </div>
 
 {% schema %}
