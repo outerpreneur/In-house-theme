@@ -5,8 +5,36 @@
             {% case block.type %}
                 {% when 'collection' %}
                     {% assign collection = collections[block.settings.collection] %}
-                    {{ collection.title }}
-                    {{ collection.description }}
+                    <div class="collection-block-info">
+                        <h2>
+                            {% if block.settings.title != blank %}
+                                {{ block.settings.title }}
+                            {% else %}
+                                {{ collection.title }}
+                            {% endif %}
+                        </h2>
+
+                        <p>
+                            {% if block.settings.description != blank %}
+                                {{ block.settings.description }}
+                            {% else %}
+                                {{ collection.description }}
+                            {% endif %}
+                        </p>
+
+                        {% if block.settings.show_button %}
+                            <a href="{{ collection.url }}" class="button">
+                                {% if block.settings.content != blank %}
+                                    {{block.settings.button_text }}
+                                {% else %}
+                                    {{ 'general.shop.shop_now' | t }}
+                                {% endif %}
+                            </a>
+                        {% endif %}
+                    </div>
+                    {% for product in collection.products limit: block.settings.max_products %}
+                        {% include 'product-card' %}
+                    {% endfor %}
                 {% else %}
             {% endcase %}
         </div>
