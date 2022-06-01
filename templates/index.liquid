@@ -1,7 +1,6 @@
 {{ content_for_index }}
 {% section 'content' %}
 {% section 'slideshow' %}
-{% section 'content' %}
 {% for product in collections.frontpage.products limit:4 %}
   <div>
     <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
