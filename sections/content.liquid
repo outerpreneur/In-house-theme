@@ -1,5 +1,26 @@
+<div
+    class="content-wrap">
+
+    {% for block in section.blocks %}
+        <div
+            class="content-block-{{ block.type }}"
+            {{ block_shopify_attributes }}>
+            {% case block.type %}
+                {% when collection %}
+                    {{ block.settings.collection }}
+                {% else %}
+
+            {% endcase %}
+
+
+        </div>
+    {% endfor %}
+
+
+</div>
+
 {% schema %}
-  {
+{
     "name": "Page Content",
     "class": "page-content-section",
     "blocks": [
