@@ -154,18 +154,41 @@
         ]
       }
     ],
-    "default": {
-    "blocks": [
+    "presets": [
       {
-        "type": "collection"
-      },
-      {
-        "type": "image_text"
-      },
-      {
-        "type": "quote"
+        "category": "Content",
+        "name": "Index Content",
+        "blocks": [
+          {
+            "type": "collection",
+            "settings": {
+              "collection": "collection-0",
+              "title": "Collection Title",
+              "content": "Lorem ipsum",
+              "show_button": true
+            }
+          },
+          {
+            "type": "image_text",
+            "settings": {
+              "title": "New Block 1",
+              "content": "Lorem ipsum dolor sit amet",
+              "show_button": true,
+              "button_url": "#"
+            }
+          },
+          {
+            "type": "image_text",
+            "settings": {
+              "title": "Block 2",
+              "content": "Lorem ipsum dolor sit amet",
+              "show_button": false,
+              "button_url": "#",
+              "direction": "ltr"
+            }
+          }
+        ]
       }
     ]
-    }
   }
 {% endschema %}
