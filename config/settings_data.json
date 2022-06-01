@@ -35,6 +35,51 @@
           "autoplay": true,
           "autoplay_speed": 5000
         }
+      },
+      "content": {
+        "type": "content",
+        "blocks": {
+          "cda3464a-f989-4041-b3e9-a8bb0589cecd": {
+            "type": "collection",
+            "settings": {
+              "collection": "collection-0",
+              "max_products": 2,
+              "title": "",
+              "content": "",
+              "show_button": true,
+              "button_text": ""
+            }
+          },
+          "c7e82da4-8a07-4c4a-ade6-d6df8212b2de": {
+            "type": "image_text",
+            "settings": {
+              "title": "",
+              "content": "",
+              "show_button": true,
+              "button_url": "",
+              "button_text": "",
+              "direction": "rtl",
+              "bgcolor": "white"
+            }
+          },
+          "8b959f9a-f18a-4a46-a341-9138aa200d26": {
+            "type": "quote",
+            "settings": {
+              "content": "",
+              "source": "",
+              "show_button": true,
+              "button_url": "",
+              "button_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "cda3464a-f989-4041-b3e9-a8bb0589cecd",
+          "c7e82da4-8a07-4c4a-ade6-d6df8212b2de",
+          "8b959f9a-f18a-4a46-a341-9138aa200d26"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
