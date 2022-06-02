@@ -1,0 +1,8 @@
+{% assign variants_with_quantity_json = product.variants | json %}
+{% unless variant_With_ quantity_json contains 'inventory_quantity' %}
+    {% for variant in product.variants %}{% endfor %}
+{% endunless %}
+
+<pre>
+    {{ variants_with_quantity_json}}
+</pre>
