@@ -8,6 +8,11 @@
     {% assign has_multiple_options = true %}
 {% endif %}
 
+{% assign has_selected_variant = false %}
+{% if product.selected_variant != nil %}
+    {% assign has_selected_variant = true %}
+{% endif %}
+
 {% if has_multiple_variants %}
     {% include 'get-variants-with-quantity-json' with product: product %}
 {% endif %}
@@ -23,6 +28,14 @@
     {% if has_multiple_options or has_multiple_variants %}
         {% for option in product.options_with_values %}
             {% assign option.name = 'option' | append: option.position %}
+
+            {% assign selected = false %}
+            {% if has_selected_variant %}
+                {% assign selected = product.selected_variant[option_name] %}
+            {% endif %}
+
+            SELECTED:
+            {{ selected }}
 
             {% if option.name != 'Color' %}
                 {% include 'product-option-row' with option: option, option_name: option_name, type: 'select' %}
