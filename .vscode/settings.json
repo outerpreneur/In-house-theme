@@ -53,5 +53,8 @@
 },
 "editor.defaultFormatter": "sissel.shopify-liquid",
 "html.format.contentUnformatted": "",
-"editor.formatOnType": true
+"editor.formatOnType": true,
+"[css]": {
+  "editor.defaultFormatter": "vscode.css-language-features"
+}
 }
