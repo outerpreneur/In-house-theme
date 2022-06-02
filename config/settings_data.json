@@ -43,7 +43,7 @@
             "type": "collection",
             "settings": {
               "collection": "collection-0",
-              "max_products": 2,
+              "max_products": 6,
               "title": "Collection title",
               "content": "content Content",
               "show_button": true,
