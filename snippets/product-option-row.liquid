@@ -5,7 +5,9 @@
 
     <div class="option-values">
         {% for value in option.values %}
-            {{ value }}
+            {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize  %}
+            <input id="{{ radio_id }}" type="radio" name="{{ option_name }}" value="{{ value }}">
+            <label for="{{ radio_id }}">{{ value }}</label>
         {% endfor %}
     </div>
 </div>

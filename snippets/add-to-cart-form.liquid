@@ -14,9 +14,10 @@
 
 <form action="/cart/add" enctype="multipart/form-data" id="add-to-cart-form" id="add-to-cart-form" method="post" data-variant="{{ variants_with_quantity_json | url_param_escape}}">
 
-    {% if has_multiple_variants or has_multiple_options %}
-        {% for product_option in product.options_with_values %}
-            {% include 'product-option-row' %}
+    {% if has_multiple_options or has_multiple_variants %}
+        {% for option in product.options_with_values %}
+            {% assign option.name = 'option' | append: option.position %}
+            {% include 'product-option-row' with option option, option_name: option_name %}
         {% endfor %}
 
         <!-- <select id="productSelect">
