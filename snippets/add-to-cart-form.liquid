@@ -18,8 +18,8 @@
 {% endif %}
 
 {% assign can_add_to_cart = false %}
-{% if has selected_variant and product.selected_variant.available %}
-{% assign can_add_to_cart = true %}
+{% if has_selected_variant and product.selected_variant.available %}
+    {% assign can_add_to_cart = true %}
 {% elsif has_multiple_variants == false and product.available %}
     {% assign can_add_to_cart = true %}
 
