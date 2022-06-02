@@ -1,13 +1,26 @@
 <div class="product_option-row">
-    <label for="">
+    <label for="{% if type == 'select' %}select-{{ option_name }} {% endif %}">
         {{ option.name }}
     </label>
 
+    <!-- TWO OPTIONS: SELECTS OR RADIOS -->
+
     <div class="option-values">
-        {% for value in option.values %}
-            {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize  %}
-            <input id="{{ radio_id }}" type="radio" name="{{ option_name }}" value="{{ value }}">
-            <label for="{{ radio_id }}">{{ value }}</label>
-        {% endfor %}
+        {% if type == 'select' %}
+            <select name="{{ option_name }}" id="select-{{ option_name }}">
+                {% for value in option.values %}
+                    <option value="{{ value }}">{{ value }}
+                    </option>
+                {% endfor %}
+            </select>
+
+
+        {% else %}
+            {% for value in option.values %}
+                {% assign radio_id = 'option-' | append: option_name | append: '-' | append: value | handleize  %}
+                <input id="{{ radio_id }}" type="radio" name="{{ option_name }}" value="{{ value }}">
+                <label for="{{ radio_id }}">{{ value }}</label>
+            {% endfor %}
+        {% endif %}
     </div>
 </div>
