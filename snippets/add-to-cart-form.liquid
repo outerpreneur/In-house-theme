@@ -17,7 +17,12 @@
     {% if has_multiple_options or has_multiple_variants %}
         {% for option in product.options_with_values %}
             {% assign option.name = 'option' | append: option.position %}
-            {% include 'product-option-row' with option option, option_name: option_name %}
+
+            {% if option.name != 'Color' %}
+                {% include 'product-option-row' with option option, option_name: option_name, type: 'select' %}
+            {% else %}
+                {% include 'product-option-row' with option option, option_name: option_name, type: 'select' %}
+            {% endif %}
         {% endfor %}
 
         <!-- <select id="productSelect">
