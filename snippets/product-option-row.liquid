@@ -8,6 +8,9 @@
     <div class="option-values">
         {% if type == 'select' %}
             <select name="{{ option_name }}" id="select-{{ option_name }}">
+                <option disabled selected value="placeholder">Select
+                    {{ option.name }}
+                </option>
                 {% for value in option.values %}
                     <option value="{{ value }}">{{ value }}
                     </option>
