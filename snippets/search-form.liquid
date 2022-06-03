@@ -3,7 +3,7 @@
 {% endif %}
 
 <form action="/search" method="get" role="search">
-    <label id="search-term" for="{{ label }}"></label>
-    <input id="search-term" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'search.form.placeholder' | t }}">
-    <button type="submit">{{ 'search.form.submit' | t }}</button>
+    <label for="search-term">{{ label }}</label>
+    <input id="search-term" class="js-search-input" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'search.form.placeholder' | t }}">
+    <button class="js-search-submit" type="submit" {% if search.terms == blank %} disabled {% endif %}>{{ 'search.form.submit' | t }}</button>
 </form>
