@@ -1,0 +1,270 @@
+/* // put your styles here */
+
+/* variables */
+
+:root {
+
+    --headline-font: 'Georgia', 'Times New Roman', Times, serif;
+    --text-font: 'Courier new', Courier, monospace;
+
+    --black: #000000;
+    --white: #FFFFFF;
+
+    --light-black: #333333;
+
+    --text-color: #555555;
+    --text-color-white: #CCCCCC;
+    --text-color-light: #707070;
+    --text-color-light-white: #AAAAAA;
+
+    --border-color: rgba(0, 0, 0, 0.15);
+    --border-color-white: rgba(255, 255, 255, 0.15);
+
+    --background-color: #F7F2EA;
+    --header-background-color: #EEE6DD;
+    --footer-background-color: #F4EDE6;
+    --border-color: rgba(0, 0, 0, 0.15);
+    --border-color-white: rgba(255, 255, 255, 0.15);
+
+    --line-global: 20px;
+    --gutter-global: var(var(--line-global));
+    --offset-global: calc(var(--line-global) * 2);
+
+    --header-height: calc(var(--line-global) * 4);
+
+    --type-headline-lg: 40px;
+    --type-headline-med: 20px;
+    --type-headline-sm: 15px;
+    --type-body-med: 15px;
+    --type-body-sm: 13px;
+
+    --type-bold: 700;
+    --type-book: 400;
+
+}
+
+/* // Mixins */
+
+/* The styles from reset-input */
+button,
+.styled-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    text-align: left;
+}
+
+.styled-select select {
+    width: 100%;
+    font-size: var(--body-font-size);
+    line-height: var(--line-global);
+    padding: var(--line-global);
+    border: var(--black-border);
+}
+
+button {
+    width: 100%;
+    font-size: var(--body-font-size);
+    line-height: var(--line-global);
+    padding: var(--line-global);
+    background: var(--black);
+    color: var(--white);
+}
+
+/* base */
+
+* {
+    font-family: var(--text-font);
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+    line-height: var(--line-global);
+}
+
+html {
+    background-color: var(--black);
+}
+
+body {
+    font-family: var(--text-font);
+    font-size: var(--type-body-med);
+    background-color: var(--white);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-top: var(--header-height);
+    background-color: var(--white);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* styleguide */
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    font-family: var(--headline-font);
+    font-weight: var(--type-bold);
+    color: var(--light-black);
+}
+
+h1,
+.h1 {
+    font-size: var(--type-headline-lg);
+    line-height: var(--line-global * 2);
+}
+
+h2,
+.h2 {
+    font-size: var(--type-headline-med);
+    line-height: var(--line-global);
+}
+
+h3,
+.h3 {
+    font-size: var(--type-headline-sm);
+    line-height: var(--line-global);
+}
+
+
+p {
+    font-family: var(--text-font);
+    font-size: var(--type-body-med);
+    line-height: var(--line-global);
+}
+
+.p-large {
+    font-family: var(--text-font);
+    font-size: var(--type-body-lg);
+    line-height: var(--line-global*2);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a:hover {
+    color: var(--black);
+}
+
+.link-logo {
+    font-size: 55px;
+    display: inline-block;
+    width: 55px;
+}
+
+.text-link {
+    font-family: var(--text-font);
+    color: var(--text-color);
+    fill: var(--currentColor);
+}
+
+.text-link:hover {
+    color: var(--black);
+}
+
+
+button[type="submit"],
+.button {
+
+    display: inline-block;
+    width: auto;
+    padding: (var(--line-global/2) var(--line-global));
+    text-align: center;
+    font-size: var(--type-body-med);
+    line-height: var(--line-global);
+    background: var(--black);
+    color: var(--white);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button:not(:disabled):hover {
+    background: lighten(var(--black), 10%);
+}
+
+.button:hover {
+    color: var(--white);
+}
+
+.button.button-cta {
+    width: 100%;
+    padding: var(--line-global);
+}
+
+.button.text-white {
+    background: var(--white);
+    color: var(--black);
+}
+
+.button:hover {
+    color: var(--black);
+    background: darken(var(--white), 10%);
+}
+
+.styled-select {
+    position: relative;
+    color: var(--text-color);
+}
+
+.styled-select.select {
+    font-family: var(--text-font);
+    font-size: var(--type-body-med);
+    line-height: var(--line-global);
+    color: var(--currentColor);
+    padding-right: var(--line-global);
+    width: 100%;
+}
+
+.styled-select.inline-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    font-size: 0.65em;
+}
+
+.styled-select.text-white {
+    color: var(--text-color-light-white);
+}
+
+.styled-select.text-white:hover {
+    color: var(--white);
+}
+
+blockquote p {
+    font-weight: var(--type-bold);
+}
+
+blockquote cite {
+    display: block;
+    margin-top: var(--line-global);
+}

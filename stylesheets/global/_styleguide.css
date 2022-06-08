@@ -1,0 +1,157 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    font-family: var(--headline-font);
+    font-weight: var(--type-bold);
+    color: var(--light-black);
+}
+
+h1,
+.h1 {
+    font-size: var(--type-headline-lg);
+    line-height: var(--line-global * 2);
+}
+
+h2,
+.h2 {
+    font-size: var(--type-headline-med);
+    line-height: var(--line-global);
+}
+
+h3,
+.h3 {
+    font-size: var(--type-headline-sm);
+    line-height: var(--line-global);
+}
+
+h4,
+.h4 {}
+
+h5,
+.h5 {}
+
+h6,
+.h6 {}
+
+p {
+    font-family: var(--text-font);
+    font-size: var(--type-body-med);
+    line-height: var(--line-global);
+}
+
+.p-large {
+    font-family: var(--text-font);
+    font-size: var(--type-body-lg);
+    line-height: var(--line-global*2);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+
+    &:hover {
+        color: var(--black);
+    }
+}
+
+.link-logo {
+    font-size: 55px;
+    display: inline-block;
+    width: 55px;
+}
+
+.text-link {
+    font-family: var(--text-font);
+    color: var(--text-color);
+    fill: var(--currentColor);
+
+    &:hover {
+        color: var(--black);
+    }
+}
+
+button[type="submit"],
+.button {
+    @include reset-input;
+    display: inline-block;
+    width: auto;
+    padding: (var(--line-global/2) var(--line-global);
+            text-align: center;
+            font-size: var(--type-body-med);
+            line-height: var(--line-global);
+            background: var(--black);
+            color: var(--white);
+
+            &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        &:not(:disabled):hover {
+            background: lighten($black, 10%);
+        }
+
+        &:hover {
+            color: $white;
+        }
+
+        &.button-cta {
+            width: 100%;
+            padding: var(--line-global);
+        }
+
+        .text-white & {
+            background: var(--white);
+            color: var(--black);
+
+            &:hover {
+                color: var(--black);
+                background: darken(var(--white, 10%);
+                }
+            }
+        }
+
+        .styled-select {
+            position: relative;
+            color: var(--text-color);
+
+            select {
+                @include reset-input;
+                font-family: var(--text-font);
+                font-size: var(--type-body-med);
+                line-height: var(--line-global);
+                color: var(--currentColor);
+                padding-right: var(--line-global);
+                width: 100%;
+            }
+
+            .inline-icon {
+                position: absolute;
+                top: 0;
+                right: 0;
+                pointer-events: none;
+                font-size: 0.65em;
+            }
+
+            .text-white & {
+                color: var(--text-color-light-white);
+
+                &:hover {
+                    color: var(--white);
+                }
+            }
+        }
+
+        blockquote {
+            p {
+                font-weight: var(--type-bold);
+            }
+
+            cite {
+                display: block;
+                margin-top: var(--line-global);
+            }
+        }

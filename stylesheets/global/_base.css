@@ -1,0 +1,33 @@
+* {
+    font-family: var(--text-font);
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+    line-height: var(--line-global);
+}
+
+html {
+    background-color: var(--black);
+}
+
+body {
+    font-family: var(--text-font);
+    font-size: var(--type-body-med);
+    background-color: var(--white);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-top: var(--header-height);
+    background-color: var(--white);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
