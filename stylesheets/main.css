@@ -1,0 +1,21 @@
+/* Global styles */
+@import 'global/reset';
+@import 'global/variables';
+@import 'global/functions';
+@import 'global/mixins';
+@import 'global/base';
+@import 'global/styleguide';
+@import 'global/layout';
+@import 'global/utils';
+
+/* Snippets */
+@import 'snippets/mini-cart';
+
+/* Sections */
+
+
+/* Templates */
+
+body {
+    background-color: brown;
+}
