@@ -268,3 +268,14 @@ blockquote cite {
     display: block;
     margin-top: var(--line-global);
 }
+
+/* header */
+
+#header-global {
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: var(--offset-global);
+}
