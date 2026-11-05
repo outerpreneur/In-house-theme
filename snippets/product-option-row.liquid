@@ -13,7 +13,7 @@
                         <option value="{{ value }}" {% if value == selected %} selected {% endif %}>{{ value }}</option>
                     {% endfor %}
                 </select>
-                {% include 'inline-icon' with svg: 'icon-arrow-down.svg', class: 'current-color-stroke' %}
+                {% include 'inline-icon' with svg, svg: 'icon-arrow-down.svg', class: 'current-color-stroke' %}
             </div>
 
         {% else %}
@@ -23,7 +23,7 @@
                 <input class="variant-radio" id="{{ radio_id }}" type="radio" name="{{ option_name }}" value="{{ value }}" {% if value == selected %} checked {% endif %}>
                 <label for="{{ radio_id }}">
                     {% if force_colors == true %}
-                        {% include 'option-color' with color: value %}
+                        {% include 'option-color' with color, color: value %}
                     {% else %}
                         {{ value }}
                     {% endif %}
@@ -32,4 +32,18 @@
 
         {% endif %}
     </div>
-</div>
+</div>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% include 'inline-icon' with svg: 'icon-arrow-down.svg', class: 'current-color-stroke'
+    %}"
+  to: "{% include 'inline-icon' with svg, svg: 'icon-arrow-down.svg', class: 'current-color-stroke'
+    %}"
+  position: 761..856
+- from: "{% include 'option-color' with color: value %}"
+  to: "{% include 'option-color' with color, color: value %}"
+  position: 1346..1399
+{%- endcomment -%}
